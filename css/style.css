@@ -40,3 +40,45 @@ body{
 .container-text h2{
     font-size: 4rem;
 }
+
+.btn-map{
+    width: 20%;
+    padding: 6px;
+}
+
+.btn-map:hover{
+    color: white;
+    background-color: black;
+    transition: 600ms;
+}
+
+.btn-map:not(hover){
+    transition: 600ms;
+}
+
+footer {
+    background-color: #505050;
+    color: #ddd;
+    padding: 40px 0;
+  }
+  footer a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+  }
+  .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: #0d6efd;
+  }
+
+  .img-footer{
+    width: 120px;
+  }
