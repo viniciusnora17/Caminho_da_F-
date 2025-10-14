@@ -11,10 +11,11 @@ export const Ramal = sequelize.define('Ramais', {
         primaryKey: true,
         autoIncrement: true
     },
-    city: {
+    cityRegion: {
         type: DataTypes.STRING,
         allowNull: false
     },
+
 });
 
 Ramal.hasMany(Pousada, { foreignKey: 'pousadaId', as: 'pousadas' });

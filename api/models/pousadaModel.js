@@ -18,8 +18,12 @@ export const Pousada = sequelize.define('Pousada', {
     type: {
         type: DataTypes.STRING(100),
         allowNull: false
-    }
-
+    },
+    cost:{
+        type: DataTypes.FLOAT,
+        allowNull: false
+    },
+    
 });
 Pousada.belongsTo(Ramal, { foreignKey: 'ramalId', as: 'ramal' });
 Pousada.belongsToMany(Atributo, { through: 'PousadaAtributos', as: 'atributos', foreignKey: 'pousadaId' });
