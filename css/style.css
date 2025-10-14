@@ -4,17 +4,6 @@ body{
     font-family: "Roboto Condensed", sans-serif;
 }
 
-#logo{
-    width: 11%;
-    padding-left: 5%;
-}
-
-.header{
-    position: fixed;
-    width: 100%;
-}
-
-
 .img {
     background: url("https://caminhodafe.com.br/ptbr/wp-content/uploads/2017/02/Turismo-1.jpg") no-repeat center center;
     background-size: cover;
@@ -22,13 +11,6 @@ body{
     width: 100%;   /* opcional */
 }
 
-.nav-link{
-    font-size: 0.9rem;
-}
-
-.navbar-nav{
-    margin-left: 5%;
-}
 
 .container-peregrino{
     display: flex;
@@ -56,29 +38,3 @@ body{
     transition: 600ms;
 }
 
-footer {
-    background-color: #505050;
-    color: #ddd;
-    padding: 40px 0;
-  }
-  footer a {
-    color: #ddd;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color: #0d6efd;
-    text-decoration: underline;
-  }
-  .social-icons a {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    color: #ddd;
-    transition: color 0.3s;
-  }
-  .social-icons a:hover {
-    color: #0d6efd;
-  }
-
-  .img-footer{
-    width: 120px;
-  }

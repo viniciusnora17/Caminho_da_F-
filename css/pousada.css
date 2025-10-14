@@ -52,7 +52,44 @@ body{
     color: #f4f4f4;
   }
 
+  span{
+    color: rgb(92, 92, 92);
+  }
+
   .hiperlink-ramal{
+    color: #025CAB;
     text-decoration: none;
     font-size: 1.5rem;
+  }
+
+  .hiperlink-ramal:hover{
+    color: #2b8bdf;
+  }
+
+  .container-pousada{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+  .container-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65dvh;
+  }
+
+  .li-pousadas{
+    width: 60%;
+    margin: auto;
+   height: 40dvh;
+   display: flex;
+   padding-top: 20px;
+
   }
