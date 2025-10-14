@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+#logo{
+    width: 11%;
+    padding-left: 5%;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-link{
+    font-size: 0.9rem;
+}
+
+.navbar-nav{
+    margin-left: 5%;
+}
+
+.img-pousada {
+    position: relative;
+    background: url("https://aliancabike.org.br/wp-content/uploads/2023/02/2-CAMINHO_FE-67_web.jpg") no-repeat center center;
+    background-size: cover;
+    height: 60dvh; 
+    width: 100%;   
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .img-pousada::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: brightness(0.5);
+    z-index: 0;
+  }
+  
+  .img-pousada h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 4rem !important;
+    color: #f4f4f4;
+  }
+
+  span{
+    color: rgb(92, 92, 92);
+  }
+
+  .hiperlink-ramal{
+    color: #025CAB;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .hiperlink-ramal:hover{
+    color: #2b8bdf;
+  }
+
+  .container-pousada{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+  .container-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65dvh;
+  }
+
+  .li-pousadas{
+    width: 60%;
+    margin: auto;
+   height: 40dvh;
+   display: flex;
+   padding-top: 20px;
+
+  }

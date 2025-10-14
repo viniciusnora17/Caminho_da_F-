@@ -1,0 +1,18 @@
+#logo{
+    width: 11%;
+    padding-left: 5%;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+
+.nav-link{
+    font-size: 0.9rem;
+}
+
+.navbar-nav{
+    margin-left: 5%;
+}
