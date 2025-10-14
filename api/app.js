@@ -1,11 +1,12 @@
 import express from "express";
+import cors from "cors";
+import ramalRoutes from "./routes/ramalRoutes.js";
+import pousadaRoutes from "./routes/pousadaRoutes.js";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-
-app.get("/", (req, res) => {
-    res.send("Hello, World!");
-});
+app.use("/ramais", ramalRoutes);
+app.use("/pousadas", pousadaRoutes);
 
 export default app;

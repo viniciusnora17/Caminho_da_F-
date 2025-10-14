@@ -4,6 +4,7 @@ import {DataTypes} from 'sequelize';
 
 //Decidir qual o melhor identificador para ramais
 //Região ou ID numérico.
+//Solução para PDF - Integração com API do Wordpress
 
 export const Ramal = sequelize.define('Ramais', {
     id: {
@@ -15,7 +16,4 @@ export const Ramal = sequelize.define('Ramais', {
         type: DataTypes.STRING,
         allowNull: false
     },
-
 });
-
-Ramal.hasMany(Pousada, { foreignKey: 'pousadaId', as: 'pousadas' });
