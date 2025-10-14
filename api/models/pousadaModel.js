@@ -15,15 +15,38 @@ export const Pousada = sequelize.define('Pousada', {
         type: DataTypes.STRING(100),
         allowNull: false
     },
+    state: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    address: {
+        type: DataTypes.STRING(200),
+        allowNull: false
+    },
     type: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    cost:{
-        type: DataTypes.FLOAT,
+    contact: {
+        type: DataTypes.STRING(100),
         allowNull: false
     },
-    
+    contactName: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    minCost: {
+        type: DataTypes.FLOAT,
+        allowNull: true
+    },
+    hasCredential: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    },
+    kmRef: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    }
+
 });
-Pousada.belongsTo(Ramal, { foreignKey: 'ramalId', as: 'ramal' });
-Pousada.belongsToMany(Atributo, { through: 'PousadaAtributos', as: 'atributos', foreignKey: 'pousadaId' });

@@ -1,5 +1,19 @@
 import app from "./app.js";
+import { sequelize } from "./database/db.js";
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => console.log(`Servidor iniciado e rodando na porta ${PORT}`));
+const startServer = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Conexão com o banco de dados estabelecida com sucesso.");
+
+    app.listen(PORT, () => {
+      console.log(`Servidor iniciado na porta ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Erro ao conectar ao banco de dados:", error);
+  }
+};
+
+startServer();
