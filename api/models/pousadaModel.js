@@ -1,6 +1,8 @@
 import {sequelize} from '../database/db.js';
 import {DataTypes} from 'sequelize';
 
+//Lembrete: definir melhor maneira para modelar os tipos de pousadas mencionados no PDF original
+
 export const Pousada = sequelize.define('Pousada', {
     id: {
         type: DataTypes.INTEGER,

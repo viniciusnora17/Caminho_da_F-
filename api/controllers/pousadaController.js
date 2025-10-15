@@ -1,5 +1,6 @@
 import { Atributos } from "../models/atributtesModel.js";
 import { Pousada } from "../models/pousadaModel.js";
+import { Pagamentos } from "../models/paymentMethodModel.js";
 
 
 export const findPousadas = async (req, res) => {
@@ -16,7 +17,7 @@ export const findPousadas = async (req, res) => {
 export const createPousada = async (req, res) => {
     try {
         const { name, city, state, address, type, contact, contactName, minCost, hasCredential, kmRef  } = req.body;
-        const newPousada = await Pousada.create({ name, city, state, address, type, contact, contactName, minCost, hasCredential, kmRef, include: [{ model: Atributos, as: 'atributos' }] });
+        const newPousada = await Pousada.create({ name, city, state, address, type, contact, contactName, minCost, hasCredential, kmRef, include: [{ model: Atributos, as: 'atributos' }] , include: [{ model: Pagamentos, as: 'pagamentos'}]});
         res.status(201).json(newPousada);
     } catch (error) {
         res.status(500).json({ error: "Erro ao criar pousada" });
