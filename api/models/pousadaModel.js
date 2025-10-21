@@ -9,39 +9,39 @@ export const Pousada = sequelize.define('Pousada', {
         primaryKey: true,
         autoIncrement: true
     },
-    name: {
+    nome: {
         type: DataTypes.STRING(200),
         allowNull: false
     },
-    city: {
+    cidade: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    state: {
+    estado: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    address: {
+    endereco: {
         type: DataTypes.STRING(200),
         allowNull: false
     },
-    type: {
+    tipo: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    contact: {
+    contato: { 
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    contactName: {
+    nomeContato: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    minCost: {
+    custoMin: {
         type: DataTypes.FLOAT,
         allowNull: true
     },
-    hasCredential: {
+    possuiCredencial: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false

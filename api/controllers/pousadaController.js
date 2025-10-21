@@ -6,7 +6,8 @@ import { Pagamentos } from "../models/paymentMethodModel.js";
 export const findPousadas = async (req, res) => {
     try {
         const pousadas = await Pousada.findAll({
-            include: [{ model: Atributos, as: 'atributos' }]
+            include: [{ model: Atributos, as: 'atributos' }],
+            include: [{ model: Pagamentos, as: 'pagamentos'}]
         });
         res.json(pousadas); 
     } catch (error) {

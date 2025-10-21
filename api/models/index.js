@@ -4,7 +4,7 @@ import Pousada from "./pousadaModel.js";
 import Atributos from "./attributeModel.js";
 import Pagamentos from "./paymentMethodModel.js";
 
-Ramal.hasMany(Pousada, { foreignKey: 'pousadaId', as: 'pousadas' });
+Ramal.hasMany(Pousada, { foreignKey: 'ramalId', as: 'pousadas' });
 
 Pousada.belongsTo(Ramal, { foreignKey: 'ramalId', as: 'ramal' });
 Pousada.belongsToMany(Atributos, { through: 'PousadaAtributos', as: 'atributos', foreignKey: 'pousadaId' });
