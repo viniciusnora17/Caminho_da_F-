@@ -3,7 +3,7 @@ import { Pousada } from "../models/pousadaModel.js";
 import { Pagamentos } from "../models/paymentMethodModel.js";
 
 
-export const findPousadas = async (req, res) => {
+export const getPousadas = async (req, res) => {
     try {
         const pousadas = await Pousada.findAll({
             include: [{ model: Atributos, as: 'atributos' }],

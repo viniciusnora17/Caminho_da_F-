@@ -4,7 +4,7 @@ import { findPousadas, createPousada, deletePousada } from "../controllers/pousa
 
 const router = express.Router();
 
-router.get("/", findPousadas);
+router.get("/", getPousadas);
 router.post("/", createPousada);
 router.delete("/:id", deletePousada);
 

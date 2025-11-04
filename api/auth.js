@@ -1,7 +1,5 @@
 import jsonwebtoken from 'jsonwebtoken';
 
-
-
 export const PRIVATE_KEY = process.env.PRIVATE_KEY;
 export const user = {
     name: 'admin',
