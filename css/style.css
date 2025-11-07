@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.img {
+    background: url("https://caminhodafe.com.br/ptbr/wp-content/uploads/2017/02/Turismo-1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100dvh; /* ou qualquer altura desejada */
+    width: 100%;   /* opcional */
+}
+
+
+.container-peregrino{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+.container-text h2{
+    font-size: 4rem;
+}
+
+.btn-map{
+    width: 20%;
+    padding: 6px;
+}
+
+.btn-map:hover{
+    color: white;
+    background-color: black;
+    transition: 600ms;
+}
+
+.btn-map:not(hover){
+    transition: 600ms;
+}
+
