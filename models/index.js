@@ -1,17 +1,17 @@
 import sequelize from "../database/db.js";
 import Ramal from "./ramalModel.js";
-import Pousada from "./pousadaModel.js";
-import Atributos from "./attributeModel.js";
-import Pagamentos from "./paymentMethodModel.js";
+import GuestHouse from "./guestHouseModel.js";
+import Attributes from "./attributeModel.js";
+import Payments from "./paymentMethodModel.js";
 
-Ramal.hasMany(Pousada, { foreignKey: 'ramalId', as: 'pousadas' });
+Ramal.hasMany(GuestHouse, { foreignKey: 'ramalId', as: 'guestHouses' });
 
-Pousada.belongsTo(Ramal, { foreignKey: 'ramalId', as: 'ramal' });
-Pousada.belongsToMany(Atributos, { through: 'PousadaAtributos', as: 'atributos', foreignKey: 'pousadaId' });
-Pousada.belongsToMany(Pagamentos, { through: 'PousadaPagamentos', as: 'pagamentos', foreignKey: 'pousadaId' });
+GuestHouse.belongsTo(Ramal, { foreignKey: 'ramalId', as: 'ramal' });
+GuestHouse.belongsToMany(Attributes, { through: 'guestHouseAttributes', as: 'attributes', foreignKey: 'guestHouseId' });
+GuestHouse.belongsToMany(Payments, { through: 'guestHousePayments', as: 'payments', foreignKey: 'guestHouseId' });
 
-Atributos.belongsToMany(Pousada, { through: 'PousadaAtributos', as: 'pousadas', foreignKey: 'atributoId' });
+Attributes.belongsToMany(GuestHouse, { through: 'guestHouseAttributes', as: 'guestHouses', foreignKey: 'attributeId' });
 
-Pagamentos.belongsToMany(Pousada, { through: 'PousadaPagamentos', as: 'pousadas', foreignKey: 'pagamentoId' });
+Payments.belongsToMany(GuestHouse, { through: 'guestHousePayments', as: 'guestHouses', foreignKey: 'paymentId' });
 
-export { sequelize, Ramal, Pousada, Atributos, Pagamentos };
+export { sequelize, Ramal, GuestHouse, Attributes, Payments };

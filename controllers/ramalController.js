@@ -4,7 +4,7 @@ import { Ramal } from "../models/ramalModel.js";
 export const findRamais = async (req, res) => {
     try {
         const ramais = await Ramal.findAll({
-            include: [{ model: Pousada, as: 'pousadas' }]
+            include: [{ model: GuestHouse, as: 'guestHouses' }]
         });
         res.json(ramais); 
     } catch (error) {

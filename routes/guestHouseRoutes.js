@@ -1,6 +1,6 @@
 import express from "express";
 
-import { findPousadas, createPousada, deletePousada } from "../controllers/pousadaController.js";
+import { findPousadas, createPousada, deletePousada } from "../controllers/guestHouseController.js";
 
 const router = express.Router();
 

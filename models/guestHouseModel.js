@@ -3,45 +3,45 @@ import {DataTypes} from 'sequelize';
 
 //Lembrete: definir melhor maneira para modelar os tipos de pousadas mencionados no PDF original
 
-export const Pousada = sequelize.define('Pousada', {
+export const guestHouse = sequelize.define('GuestHouse', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    nome: {
+    name: {
         type: DataTypes.STRING(200),
         allowNull: false
     },
-    cidade: {
+    city: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    estado: {
-        type: DataTypes.STRING(100),
+    uf: {
+        type: DataTypes.STRING(2),
         allowNull: false
     },
-    endereco: {
+    adress: {
         type: DataTypes.STRING(200),
         allowNull: false
     },
-    tipo: {
+    type: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    contato: { 
+    phoneNumber: { 
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    nomeContato: {
+    contactName: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    custoMin: {
+    minCost: {
         type: DataTypes.FLOAT,
         allowNull: true
     },
-    possuiCredencial: {
+    hasCredential: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false

@@ -1,6 +1,6 @@
 import { Atributos } from "../models/atributtesModel.js";
 
-export const findAtributos = async (req, res) => {
+export const findAttributes = async (req, res) => {
     try {
         const atributos = await Atributos.findAll();
         res.json(atributos);
@@ -9,7 +9,7 @@ export const findAtributos = async (req, res) => {
     }
 };
 
-export const createAtributos = async (req, res) => {
+export const createAttribute = async (req, res) => {
     try {
         const { name } = req.body;
         const newAtributo = await Atributos.create({ name });
@@ -19,7 +19,7 @@ export const createAtributos = async (req, res) => {
     }   
 };
 
-export const updateAtributo = async (req, res) => {
+export const updateAttribute = async (req, res) => {
     try {
         const { id } = req.params;
         const { name } = req.body;
@@ -32,9 +32,10 @@ export const updateAtributo = async (req, res) => {
         res.json(atributo);
     } catch (error) {
         res.status(500).json({ error: "Erro ao atualizar atributo" });
-    }   
+    }       
+}
 
-export const deleteAtributo = async (req, res) => {
+export const deleteAttribute = async (req, res) => {
     try {
         const { id } = req.params;
         await Atributos.destroy({ where: { id } });

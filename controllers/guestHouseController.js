@@ -1,9 +1,9 @@
 import { Atributos } from "../models/atributtesModel.js";
-import { Pousada } from "../models/pousadaModel.js";
+import { Pousada } from "../models/guestHouseModel.js";
 import { Pagamentos } from "../models/paymentMethodModel.js";
 
 
-export const getPousadas = async (req, res) => {
+export const getGuestHouses = async (req, res) => {
     try {
         const pousadas = await Pousada.findAll({
             include: [{ model: Atributos, as: 'atributos' }],
@@ -15,7 +15,7 @@ export const getPousadas = async (req, res) => {
     }
 };
 
-export const createPousada = async (req, res) => {
+export const createGuestHouse = async (req, res) => {
     try {
         const { name, city, state, address, type, contact, contactName, minCost, hasCredential, kmRef  } = req.body;
         const newPousada = await Pousada.create({ name, city, state, address, type, contact, contactName, minCost, hasCredential, kmRef, include: [{ model: Atributos, as: 'atributos' }] , include: [{ model: Pagamentos, as: 'pagamentos'}]});
@@ -25,7 +25,7 @@ export const createPousada = async (req, res) => {
     }   
 };
 
-export const deletePousada = async (req, res) => {
+export const deleteGuestHouse = async (req, res) => {
     try {
         const { id } = req.params;
         await Pousada.destroy({ where: { id } });
